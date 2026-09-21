@@ -14,7 +14,7 @@
         "alternateName": "Lochie",
         "url": "https://lochie.xyz",
         "email": "bradford.lachlan@gmail.com",
-        "image": "https://lochie.xyz/img/hero_cropped_500w.webp",
+        "image": "https://lochie.xyz/assets/img/hero_cropped_500w.webp",
         "sameAs": [
           "https://github.com/maladr0it",
           "https://www.linkedin.com/in/lachlan-bradford-44556487",
@@ -22,29 +22,42 @@
         ]
       }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LF4WCMQ5H"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-0LF4WCMQ5H");
-    </script>
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
-      as="style"
-      crossorigin="anonymous"
+      href="/assets/fonts/montserrat-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous" />
+    <link
+      rel="preload"
+      href="/assets/fonts/montserrat-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link
       rel="icon"
       type="image/x-icon"
       href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVR42mO4yHDxPyWYYRgawEAAjBowMgwYgXkBAAP/+NBa7C6nAAAAAElFTkSuQmCC"
     />
     <style>
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: url("/assets/fonts/montserrat-400.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+        src: url("/assets/fonts/montserrat-500.woff2") format("woff2");
+      }
+
       :root {
         --color-background: #fff;
         --color-text: #121212;
@@ -180,17 +193,17 @@
           <source
             media="(min-width: 40em)"
             type="image/webp"
-            srcset="img/hero_cropped_250w.webp 1x, img/hero_cropped_500w.webp 2x"
+            srcset="/assets/img/hero_cropped_250w.webp 1x, /assets/img/hero_cropped_500w.webp 2x"
           />
           <source
             media="(min-width: 40em)"
             type="image/jpeg"
-            srcset="img/hero_cropped_250w.jpeg 1x, img/hero_cropped_250w.jpeg 2x"
+            srcset="/assets/img/hero_cropped_250w.jpeg 1x, /assets/img/hero_cropped_500w.jpeg 2x"
           />
-          <source type="image/webp" srcset="img/hero_600w.webp 1x, img/hero_1200w.webp 2x" />
-          <source type="image/jpeg" srcset="img/hero_600w.jpeg 1x, img/hero_1200w.jpeg 2x" />
+          <source type="image/webp" srcset="/assets/img/hero_600w.webp 1x, /assets/img/hero_800w.webp 2x" />
+          <source type="image/jpeg" srcset="/assets/img/hero_600w.jpeg 1x, /assets/img/hero_800w.jpeg 2x" />
           <img
-            src="img/hero_600w.jpeg"
+            src="/assets/img/hero_600w.jpeg"
             width="600"
             height="450"
             class="hero-image"
@@ -256,9 +269,9 @@
           <li>
             <header class="job-header">
               <picture class="job-logo-container">
-                <source type="image/webp" srcset="img/tiktok_logo_64w.webp 1x, img/tiktok_logo_128w.webp 2x" />
-                <source type="image/png" srcset="img/tiktok_logo_64w.png 1x, img/tiktok_logo_128w.png 2x" />
-                <img src="img/tiktok_logo_64w.png" width="64" height="64" class="job-logo" alt="TikTok logo" />
+                <source type="image/webp" srcset="/assets/img/tiktok_logo_64w.webp 1x, /assets/img/tiktok_logo_128w.webp 2x" />
+                <source type="image/png" srcset="/assets/img/tiktok_logo_64w.png 1x, /assets/img/tiktok_logo_128w.png 2x" />
+                <img src="/assets/img/tiktok_logo_64w.png" width="64" height="64" class="job-logo" alt="TikTok logo" loading="lazy" decoding="async" />
               </picture>
               <div>
                 <h3 class="job-title">Tech Lead – Design Systems</h3>
@@ -280,15 +293,17 @@
               <picture class="job-logo-container">
                 <source
                   type="image/webp"
-                  srcset="img/playstation_logo_64w.webp 1x, img/playstation_logo_128w.webp 2x"
+                  srcset="/assets/img/playstation_logo_64w.webp 1x, /assets/img/playstation_logo_128w.webp 2x"
                 />
-                <source type="image/png" srcset="img/playstation_logo_64w.png 1x, img/playstation_logo_128w.png 2x" />
+                <source type="image/png" srcset="/assets/img/playstation_logo_64w.png 1x, /assets/img/playstation_logo_128w.png 2x" />
                 <img
-                  src="img/playstation_logo_64w.png"
+                  src="/assets/img/playstation_logo_64w.png"
                   width="64"
                   height="64"
                   class="job-logo"
                   alt="PlayStation logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </picture>
               <div>
@@ -309,9 +324,9 @@
           <li>
             <header class="job-header">
               <picture class="job-logo-container">
-                <source type="image/webp" srcset="img/indeed_logo_64w.webp 1x, img/indeed_logo_128w.webp 2x" />
-                <source type="image/png" srcset="img/indeed_logo_64w.png 1x, img/indeed_logo_128w.png 2x" />
-                <img src="img/indeed_logo_64w.png" width="64" height="64" class="job-logo" alt="Indeed logo" />
+                <source type="image/webp" srcset="/assets/img/indeed_logo_64w.webp 1x, /assets/img/indeed_logo_128w.webp 2x" />
+                <source type="image/png" srcset="/assets/img/indeed_logo_64w.png 1x, /assets/img/indeed_logo_128w.png 2x" />
+                <img src="/assets/img/indeed_logo_64w.png" width="64" height="64" class="job-logo" alt="Indeed logo" loading="lazy" decoding="async" />
               </picture>
               <div>
                 <h3 class="job-title">Design Technologist (Prototyper)</h3>
@@ -489,11 +504,5 @@
 
       window.customElements.define("theme-picker", ThemePicker);
     </script>
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
-      crossorigin="anonymous"
-    />
   </body>
 </html>
